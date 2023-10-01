@@ -1,8 +1,12 @@
 <!DOCTYPE html>
 {% extends 'blog-base.html' %}
 {% load static %}
+{% block title %}
+<title>{{ post.title }} - Blog Details</title>
+{% endblock %}
     <!--================ Hero sm Banner start =================-->
-{% block content %}
+{% block banner %}
+
     <section class="mb-30px">
       <div class="container">
         <div class="hero-banner hero-banner--sm">
@@ -18,9 +22,10 @@
         </div>
       </div>
     </section>
+ {% endblock %}
     <!--================ Hero sm Banner end =================-->
     <!--================ Start Blog Post Area =================-->
-
+{% block content %}
     <section class="blog-post-area section-margin">
       <div class="container">
         <div class="row">

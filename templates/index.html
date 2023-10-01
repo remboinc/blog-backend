@@ -2,7 +2,10 @@
 <!DOCTYPE html>
 {% extends 'blog-base.html' %}
 {% load static %}
-{% block content %}
+{% block title %}
+<title>Sensive Blog - Home</title>
+{% endblock %}
+{% block banner %}
     <main class="site-main">
       <!--================Hero Banner start =================-->
       <section class="mb-30px">
@@ -16,8 +19,9 @@
           </div>
         </div>
       </section>
+      {% endblock %}
       <!--================Hero Banner end =================-->
-
+{% block content %}
       <!--================ Blog slider start =================-->
       <section>
         <div class="container">
