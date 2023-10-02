@@ -13,7 +13,7 @@
         <h1>Blog details</h1>
         <nav aria-label="breadcrumb" class="banner-breadcrumb">
           <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item"><a href="{% url 'index' %}">Home</a></li>
             <li aria-current="page" class="breadcrumb-item active">Blog Details</li>
           </ol>
         </nav>
@@ -48,8 +48,7 @@
           </div>
           <p>{{ post.text }}</p>
           <div class="news_d_footer flex-column flex-sm-row">
-            <a href="#"><span class="align-middle mr-2"><i class="ti-heart" style="color: red"></i></span>{{
-              post.likes_amount }} likes</a>
+            <a href="#"><span class="align-middle mr-2"><i class="ti-heart" style="color: red"></i></span>{{ post.likes_amount }} likes</a>
             <a class="justify-content-sm-center ml-sm-auto mt-sm-0 mt-2" href="#"><span class="align-middle mr-2"><i
               class="ti-themify-favicon"></i></span>{{ post.comments|length }} comments</a>
             <div class="news_socail ml-sm-auto mt-sm-0 mt-2">
