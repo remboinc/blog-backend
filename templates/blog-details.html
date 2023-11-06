@@ -10,25 +10,25 @@
 {% block banner %}
 <section class="mb-30px">
  <div class="container">
-  <div class="hero-banner hero-banner--sm">
-   <div class="hero-banner__content">
-    <h1>
+    <div class="hero-banner hero-banner--sm">
+     <div class="hero-banner__content">
+      <h1>
      Blog details
-    </h1>
-    <nav aria-label="breadcrumb" class="banner-breadcrumb">
-     <ol class="breadcrumb">
-      <li class="breadcrumb-item">
-       <a href="{% url 'index' %}">
+      </h1>
+      <nav aria-label="breadcrumb" class="banner-breadcrumb">
+       <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+         <a href="{% url 'index' %}">
         Home
-       </a>
-      </li>
-      <li aria-current="page" class="breadcrumb-item active">
+         </a>
+        </li>
+        <li aria-current="page" class="breadcrumb-item active">
        Blog Details
-      </li>
-     </ol>
-    </nav>
-   </div>
-  </div>
+        </li>
+       </ol>
+      </nav>
+     </div>
+    </div>
  </div>
 </section>
 {% endblock %}
@@ -37,126 +37,126 @@
 {% block content %}
 <section class="blog-post-area section-margin">
  <div class="container">
-  <div class="row">
-   <div class="col-lg-8">
-    <div class="main_blog_details">
+    <div class="row">
+     <div class="col-lg-8">
+      <div class="main_blog_details">
      {% if post.image_url %}
-     <img class="img-fluid" src="{{ post.image_url }}"/>
+       <img class="img-fluid" src="{{ post.image_url }}"/>
      {% else %}
-     <img alt="post banner" class="img-fluid" src="{% static 'img/banner/blog.png' %}"/>
+       <img alt="post banner" class="img-fluid" src="{% static 'img/banner/blog.png' %}"/>
      {% endif %}
-     <h4>
+       <h4>
       {{ post.title }}
-     </h4>
-     <div class="user_details">
-      <div class="mt-sm-0 mt-3">
-       <div class="media">
-        <div class="media-body">
-         <h5>
+       </h4>
+       <div class="user_details">
+        <div class="mt-sm-0 mt-3">
+         <div class="media">
+          <div class="media-body">
+           <h5>
           {{ post.author }}
-         </h5>
-         <p>
+           </h5>
+           <p>
           {{ post.published_at }}
-         </p>
+           </p>
+          </div>
+         </div>
         </div>
        </div>
-      </div>
-     </div>
-     <p>
+       <p>
       {{ post.text }}
-     </p>
-     <div class="news_d_footer flex-column flex-sm-row">
-      <a href="#">
-       <span class="align-middle mr-2">
-        <i class="ti-heart" style="color: red">
-        </i>
-       </span>
+       </p>
+       <div class="news_d_footer flex-column flex-sm-row">
+        <a href="#">
+         <span class="align-middle mr-2">
+          <i class="ti-heart" style="color: red">
+          </i>
+         </span>
        {{ post.likes_amount }} likes
-      </a>
-      <a class="justify-content-sm-center ml-sm-auto mt-sm-0 mt-2" href="#">
-       <span class="align-middle mr-2">
-        <i class="ti-themify-favicon">
-        </i>
-       </span>
+        </a>
+        <a class="justify-content-sm-center ml-sm-auto mt-sm-0 mt-2" href="#">
+         <span class="align-middle mr-2">
+          <i class="ti-themify-favicon">
+          </i>
+         </span>
        {{ post.comments|length }} comments
-      </a>
-      <div class="news_socail ml-sm-auto mt-sm-0 mt-2">
-       <a href="#">
-        <i class="fab fa-facebook-f">
-        </i>
-       </a>
-       <a href="#">
-        <i class="fab fa-twitter">
-        </i>
-       </a>
-       <a href="#">
-        <i class="fab fa-dribbble">
-        </i>
-       </a>
-       <a href="#">
-        <i class="fab fa-behance">
-        </i>
-       </a>
-      </div>
-     </div>
-    </div>
-    <div class="comments-area">
-     <h4>
-      {{ post.comments|length }} comments
-     </h4>
-     <div class="comment-list">
-      {% for comment in post.comments %}
-      <div class="single-comment justify-content-between d-flex">
-       <div class="user justify-content-between d-flex">
-        <div class="desc">
-         <h5>
-          <a href="#">
-           {{ comment.author }}
-          </a>
-         </h5>
-         <p class="date">
-          {{ comment.published_at }}
-         </p>
-         <p class="comment">
-          {{ comment.text }}
-         </p>
+        </a>
+        <div class="news_socail ml-sm-auto mt-sm-0 mt-2">
+         <a href="#">
+          <i class="fab fa-facebook-f">
+          </i>
+         </a>
+         <a href="#">
+          <i class="fab fa-twitter">
+          </i>
+         </a>
+         <a href="#">
+          <i class="fab fa-dribbble">
+          </i>
+         </a>
+         <a href="#">
+          <i class="fab fa-behance">
+          </i>
+         </a>
         </div>
        </div>
-       <div class="reply-btn">
-        <a class="btn-reply text-uppercase" href="">
+      </div>
+      <div class="comments-area">
+       <h4>
+      {{ post.comments|length }} comments
+       </h4>
+       <div class="comment-list">
+      {% for comment in post.comments %}
+        <div class="single-comment justify-content-between d-flex">
+         <div class="user justify-content-between d-flex">
+          <div class="desc">
+           <h5>
+            <a href="#">
+           {{ comment.author }}
+            </a>
+           </h5>
+           <p class="date">
+          {{ comment.published_at }}
+           </p>
+           <p class="comment">
+          {{ comment.text }}
+           </p>
+          </div>
+         </div>
+         <div class="reply-btn">
+          <a class="btn-reply text-uppercase" href="">
          reply
-        </a>
-       </div>
-      </div>
+          </a>
+         </div>
+        </div>
       {% endfor %}
-     </div>
-    </div>
-   </div>
-   <!-- Start Blog Post Siddebar -->
-   <div class="col-lg-4 sidebar-widgets">
-    <div class="widget-wrap">
-     <div class="single-sidebar-widget newsletter-widget">
-      <h4 class="single-sidebar-widget__title">
-       Newsletter
-      </h4>
-      <div class="form-group mt-30">
-       <div class="col-autos">
-        <input class="form-control" id="inlineFormInputGroup" onblur="this.placeholder = 'Enter email'" onfocus="this.placeholder = ''" placeholder="Enter email" type="text"/>
        </div>
       </div>
-      <button class="bbtns d-block mt-20 w-100">
+     </div>
+     <!-- Start Blog Post Siddebar -->
+     <div class="col-lg-4 sidebar-widgets">
+      <div class="widget-wrap">
+       <div class="single-sidebar-widget newsletter-widget">
+        <h4 class="single-sidebar-widget__title">
+       Newsletter
+        </h4>
+        <div class="form-group mt-30">
+         <div class="col-autos">
+          <input class="form-control" id="inlineFormInputGroup" onblur="this.placeholder = 'Enter email'" onfocus="this.placeholder = ''" placeholder="Enter email" type="text"/>
+         </div>
+        </div>
+        <button class="bbtns d-block mt-20 w-100">
        Subcribe
-      </button>
-     </div>
-     <div class="single-sidebar-widget post-category-widget">
-      <h4 class="single-sidebar-widget" style="height:200px;">
+        </button>
+       </div>
+       <div class="single-sidebar-widget post-category-widget">
+        <h4 class="single-sidebar-widget" style="height:200px;">
        &Zcy;&dcy;&iecy;&scy;&softcy; &bcy;&ucy;&dcy;&iecy;&tcy; &rcy;&iecy;&kcy;&lcy;&acy;&mcy;&acy;
-      </h4>
+        </h4>
+       </div>
+      </div>
      </div>
+     <!-- End Blog Post Siddebar -->
     </div>
-   </div>
-   <!-- End Blog Post Siddebar -->
-  </div>
  </div>
 </section>
 <!--================ End Blog Post Area =================-->

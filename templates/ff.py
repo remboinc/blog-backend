@@ -19,12 +19,13 @@ for root, dirs, files in os.walk(target_folder):
             # Определяем настройки отступов
             formatter = "html"  # Тип форматирования, "html" или "xml"
 
-            # Отформатируем HTML с отступами для лучшей читаемости
+            # Отформатируем HTML с отступами в два пробела перед тегами для лучшей читаемости
             formatted_html = soup.prettify(formatter=formatter)
+            formatted_html = formatted_html.replace("  <", "    <")  # Заменяем один пробел на два перед тегами
+            # Заменяем символы новой строки на пустую строку
             # formatted_html = formatted_html.replace("\n", "")
             # Записываем отформатированный HTML обратно в файл
             with open(file_path, 'w', encoding='utf-8') as file:
                 file.write(formatted_html)
 
             print(f'Файл {file_path} отформатирован.')
-
