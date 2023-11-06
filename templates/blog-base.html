@@ -5,12 +5,12 @@
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
     <meta content="ie=edge" http-equiv="X-UA-Compatible"/>
-  {% block title %}
-  {% endblock %}
+    {% block title %}
+    {% endblock %}
     <link href="{% static 'img/favicon.png' type='image/png' %}" rel="icon"/>
     <link href="{% static '/styles.min.css' %}" rel="stylesheet"/>
   </head>
- <!--================Header Menu Area =================-->
+  <!--================Header Menu Area =================-->
   <header class="header_area">
     <div class="main_menu">
       <nav class="navbar navbar-expand-lg navbar-light">
@@ -24,7 +24,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-       <!-- Collect the nav links, forms, and other content for toggling -->
+          <!-- Collect the nav links, forms, and other content for toggling -->
           <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
             <ul class="nav navbar-nav menu_nav justify-content-center">
               <li class="nav-item"><a class="nav-link" href="{% url 'index' %}">Home</a></li>
@@ -42,7 +42,7 @@
     </div>
   </header>
  <!--================Header Menu Area =================-->
- <body>
+  <body>
   {% block banner %}
   {% endblock %}
   {% block content %}
@@ -97,13 +97,11 @@
         <p class="footer-text m-0">
         <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
           Copyright &copy;
-        <script>document.write(new Date().getFullYear());</script>
+          <script>document.write(new Date().getFullYear());</script>
           All rights reserved | This template is made with
-        <i aria-hidden="true" class="fa fa-heart"></i>
+          <i aria-hidden="true" class="fa fa-heart"></i>
           by
-        <a href="https://colorlib.com" target="_blank">
-          Colorlib
-        </a>
+          <a href="https://colorlib.com" target="_blank">Colorlib</a>
         <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
         </p>
       </div>
